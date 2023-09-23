@@ -26,7 +26,7 @@ const Suggestions = () => {
     <div className="flex items-center justify-center py-4 px-5 md:py-5">
       <p className="flex items-center p-5 pr-5 text-md shadow-xl rounded-xl w-fit bg-white italic max-w-3xl text-[#0055D1]">
         <UserCircleIcon
-          className={`inline-block h-10 w-10 text-[#0055D1] ${
+          className={`inline-block mr-1 h-10 w-10 text-[#0055D1] ${
             loading && "animate-spin"
           }`}
         />
