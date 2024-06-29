@@ -2,8 +2,6 @@ import formatTodosForAI from "./formatTodosForAI";
 
 const fetchSuggestions = async (board: Board) => {
   const todos = formatTodosForAI(board);
-//   console.log(todos, "formatted to send");
-  
 
   const res = await fetch("/api/generateSummary", {
     method: "POST",
@@ -13,10 +11,14 @@ const fetchSuggestions = async (board: Board) => {
     body: JSON.stringify({ todos }),
   });
 
-  const GPTdata = await res.json();
-  const { content } = GPTdata;
-//   console.log(GPTdata);
-  
+  let content;
+  if (res.ok) {
+    const GPTdata = await res.json();
+    content = GPTdata.content;
+  } else {
+    // Handle the case where the response is not OK
+    content = "Error: Unable to fetch suggestions";
+  }
 
   return content;
 };

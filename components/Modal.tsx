@@ -96,14 +96,14 @@ const Modal = () => {
                   </button>
 
                   {
-                    image && (
+                    image && (  
                       <Image
-                        alt="uploaded image"
+                        alt="uploaded image"  
                         width={200}
                         height={200}
                         className="w-full h-44 object-cover mt-2 hover:grayscale transition-all duration-150 cursor-not-allowed"
                         src={URL.createObjectURL(image)}
-                        onClick={() => {
+                        onClick={() => {  
                           setImage(null)
                         }}
                       />

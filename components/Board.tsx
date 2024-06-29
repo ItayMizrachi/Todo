@@ -102,7 +102,7 @@ const Board = () => {
       <Droppable droppableId="boards" direction="horizontal" type="column">
         {(provided) => (
           <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-7xl mx-auto p-3 md:p-5"
+            className="grid grid-cols-1 md:grid-cols-3 gap-5  max-w-7xl mx-auto p-3 md:p-5"
             {...provided.droppableProps}
             ref={provided.innerRef}
           >
